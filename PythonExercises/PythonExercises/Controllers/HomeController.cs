@@ -20,10 +20,8 @@ namespace PythonExercises.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Levels()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
