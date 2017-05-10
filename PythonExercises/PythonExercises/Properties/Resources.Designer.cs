@@ -61,7 +61,9 @@ namespace PythonExercises.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Question:
+        ///   Looks up a localized string similar to Question 1:
+        ///
+        ///Question:
         ///Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5,
         ///between 2000 and 3200 (both included).
         ///The numbers obtained should be printed in a comma-separated sequence on a single line.
@@ -76,10 +78,12 @@ namespace PythonExercises.Properties {
         ///        l.append(str(i))
         ///
         ///print &apos;,&apos;.join(l)
-        ///#----------------------------------------#
         ///
         ///#----------------------------------------#
-        ///Q [rest of string was truncated]&quot;;.
+        ///Question 2:
+        ///Level 1
+        ///
+        ///Questi [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PythonCourseFile {
             get {
