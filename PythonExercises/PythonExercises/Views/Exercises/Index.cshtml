@@ -1,0 +1,8 @@
+﻿@model IEnumerable<PythonExercises.Models.Exercise>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Exercises List</h2>
+@(Model != null ? @Html.Partial("_ExercisesList", Model) : @Html.Partial("_ExercisesError"))

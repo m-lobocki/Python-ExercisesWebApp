@@ -1,0 +1,36 @@
+﻿@model PythonExercises.Models.ExerciseViewModel
+
+@{
+    ViewBag.Title = "Exercise";
+    var exercise = Model.Exercise;
+    var count = Model.Count;
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Exercise @exercise.Id</h2>
+    </div>
+    <div class="panel-body preserve-whitespaces">
+        <h3>Question:</h3>
+        <p>@exercise.Question</p>
+        <h3>Hints:</h3>
+        <p><em>@exercise.Hints</em></p>
+        <h3>Sample solution:</h3>
+        <a class="btn btn-primary" href="javascript:void(0)" id="show-solution-btn">Show the solution</a>
+        <pre hidden id="solution"><code>@exercise.Solution</code></pre>
+    </div>
+    <div class="panel-footer">
+        <nav>
+            <ul class="pager">
+                @if (exercise.Id > 1)
+                {
+                    <li class="previous"><a href="@Url.Action("Show", new { id = exercise.Id - 1 })"><span>&larr;</span> Previous</a></li>
+                }
+                @if (exercise.Id < count)
+                {
+                    <li class="next"><a href="@Url.Action("Show", new { id = exercise.Id + 1 })">Next <span>&rarr;</span></a></li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

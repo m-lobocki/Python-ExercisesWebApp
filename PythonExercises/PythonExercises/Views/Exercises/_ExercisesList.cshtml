@@ -1,0 +1,21 @@
+﻿@model IEnumerable<PythonExercises.Models.Exercise>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Exercise</th>
+        <th>Level</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var exercise in Model)
+    {
+        <tr data-url="@Url.Action("Show", new { id = exercise.Id })">
+            <td>@exercise.Id</td>
+            <td>@(string.Join("", exercise.Question.Take(100)) + "...")</td>
+            <td>@exercise.Level</td>
+        </tr>
+    }
+    </tbody>
+</table>
